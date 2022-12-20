@@ -1,7 +1,16 @@
 export default function Index() {
   return (
-    <div>
-      <h1>Working</h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "90vh",
+      }}
+    >
+      <h1 style={{ fontSize: "1.5em", fontWeight: "lighter" }}>
+        Work in progress
+      </h1>
     </div>
   );
 }
