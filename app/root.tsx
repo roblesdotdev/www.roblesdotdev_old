@@ -18,6 +18,34 @@ export const meta: MetaFunction = () => ({
 })
 
 export const links: LinksFunction = () => [
+  {
+    rel: 'preload',
+    as: 'font',
+    href: '/fonts/jetbrains-mono/light.woff2',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  },
+  {
+    rel: 'preload',
+    as: 'font',
+    href: '/fonts/jetbrains-mono/regular.woff2',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  },
+  {
+    rel: 'preload',
+    as: 'font',
+    href: '/fonts/jetbrains-mono/medium.woff2',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  },
+  {
+    rel: 'preload',
+    as: 'font',
+    href: '/fonts/jetbrains-mono/bold.woff2',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  },
   { rel: 'stylesheet', as: 'style', href: tailwindStyles },
   { rel: 'stylesheet', as: 'style', href: appStyles },
 ]
@@ -29,7 +57,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen w-full overflow-x-hidden antialiased">
+      <body className="min-h-screen w-full overflow-x-hidden font-mono antialiased">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
