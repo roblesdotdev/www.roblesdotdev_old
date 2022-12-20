@@ -85,6 +85,19 @@ input[type='search']::-webkit-search-results-decoration {
   background: var(--fg-default);
 }
 
+/* 
+ * LAYOUT 
+ */
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid:
+    'navbar' auto
+    'main' 1fr
+    'footer' auto
+    / 1fr;
+}
+
 /*
  * COMPONENTS
  */

@@ -9,6 +9,8 @@ import {
 } from '@remix-run/react'
 import tailwindStyles from '~/styles/tailwind.css'
 import appStyles from '~/styles/app.css'
+import Navbar from '~/components/navbar'
+import Footer from '~/components/footer'
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -57,8 +59,14 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen w-full overflow-x-hidden font-mono antialiased">
-        <Outlet />
+      <body className="min-h-screen w-full overflow-x-hidden antialiased">
+        <div className="layout bg-canvas font-mono text-fg">
+          <Navbar className="navbar" />
+          <main className="main">
+            <Outlet />
+          </main>
+          <Footer className="footer" />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
