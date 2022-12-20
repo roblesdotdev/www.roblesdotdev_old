@@ -27,7 +27,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="antialiased min-h-screen w-full overflow-x-hidden">
+      <body className="min-h-screen w-full overflow-x-hidden antialiased">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
