@@ -1,6 +1,6 @@
 # Aldo R. Robles Personal Website
 
-This is the source code for my [website](https://roblesdotdev.fly.dev/).
+This is the source code for my <a href="https://roblesdotdev.fly.dev/" target="_blank">website</a>.
 
 ### State
 
