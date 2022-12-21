@@ -52,7 +52,7 @@
  */
 
 b {
-  @apply font-bold text-fg;
+  @apply font-medium text-fg;
 }
 
 /* clears the ‘X’ from Internet Explorer */

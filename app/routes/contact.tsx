@@ -12,11 +12,11 @@ export default function Contact() {
         Contact
       </h1>
       <div className="mt-8 flex flex-col gap-8 font-light text-fg-muted md:text-lg">
-        <p>
+        <p className="leading-[1.80] lg:leading-loose">
           In the interest of saving us both some time, here are a few reasons to{' '}
           <b>not get in touch</b>:
         </p>
-        <ul className="flex list-disc flex-col gap-4 leading-relaxed">
+        <ul className="flex list-inside list-[square] flex-col gap-4 font-light leading-[1.80] lg:leading-loose">
           <li>
             <b>You're hunting around for the lowest price.</b> I don't compete
             on prices. And I don't have a fixed or hourly rate. I charge on a
@@ -41,7 +41,7 @@ export default function Contact() {
         </ul>
       </div>
       <Spacer />
-      <div className="font-light leading-relaxed text-fg-muted md:text-lg lg:leading-loose">
+      <div className="font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
         <p>
           If you're still here and interested in my profile, I'd love to hear
           from you and learn more about what you're working on. Write me at{' '}

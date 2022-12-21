@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => ({
 export default function AboutPage() {
   return (
     <div className="mx-auto h-full max-w-xl py-12 px-6 md:max-w-2xl lg:max-w-4xl">
-      <section className="flex flex-col gap-6 font-mono font-light leading-relaxed text-fg-muted md:text-lg lg:leading-loose">
+      <section className="flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
         <div className="flex items-center gap-2">
           <img
             alt="My pic profile"
@@ -20,14 +20,14 @@ export default function AboutPage() {
           <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
         ))}
       </section>
-      <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-relaxed text-fg-muted md:text-lg lg:leading-loose">
+      <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
         <h1 className="text-2xl font-bold">Skills</h1>
         {skills.map((paragraph, idx) => (
           <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
         ))}
       </section>
 
-      <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-relaxed text-fg-muted md:text-lg lg:leading-loose">
+      <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
         <h1 className="text-2xl font-bold">About this site</h1>
         <p>If you're interested, this site is built with:</p>
         <ul className="list-disc pl-4">
