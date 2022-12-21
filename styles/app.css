@@ -55,6 +55,10 @@ b {
   @apply font-medium text-fg;
 }
 
+.list {
+  @apply list-inside list-[square] lg:ml-4 lg:list-outside;
+}
+
 /* clears the ‘X’ from Internet Explorer */
 input[type='search']::-ms-clear {
   display: none;

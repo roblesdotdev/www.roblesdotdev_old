@@ -16,7 +16,7 @@ export default function Contact() {
           In the interest of saving us both some time, here are a few reasons to{' '}
           <b>not get in touch</b>:
         </p>
-        <ul className="flex list-inside list-[square] flex-col gap-4 font-light leading-[1.80] lg:leading-loose">
+        <ul className="list flex flex-col gap-4 font-light leading-[1.80] lg:leading-loose">
           <li>
             <b>You're hunting around for the lowest price.</b> I don't compete
             on prices. And I don't have a fixed or hourly rate. I charge on a

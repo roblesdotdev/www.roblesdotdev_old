@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
         <h1 className="text-2xl font-bold">About this site</h1>
         <p>If you're interested, this site is built with:</p>
-        <ul className="list-disc pl-4">
+        <ul className="list">
           <li>
             <a
               className="underline hover:text-link"
