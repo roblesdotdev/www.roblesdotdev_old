@@ -106,7 +106,7 @@ export function CatchBoundary() {
 export function ErrorBoundary({ error }: { error: Error }) {
   return (
     <Document title="Uh-oh!">
-      <ServerError />
+      <ServerError error={error} />
     </Document>
   )
 }
