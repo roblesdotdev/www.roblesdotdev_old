@@ -1,5 +1,5 @@
 export const info = [
-  `Hi! My name is <b>Aldo R. Robles</b> and I'm a passionate developer 
+  `Hi! My name is <b>Aldo R. Robles</b>. I'm a passionate developer 
   interested in web, mobile, command line tools and tons of other 
   stuff.`.trim(),
   `I'm currently located in Argentina, I work remotely and do projects 
@@ -16,10 +16,10 @@ export const info = [
 ]
 
 export const skills = [
-  `My work fits under the umbrella of "Fullstack Developer". With a wide
+  `My work fits under the umbrella of "Full-stack Developer". With a wide
   variety of skills focused on web and mobile development among which
-  stand out: HTML, CSS, Javascript, Typescript, React(nextjs, remix),
-  Nodejs, Kotlin, SQL, Prisma and a few more.
+  stand out: HTML, CSS, JavaScript, Typescript, React(next, remix),
+  Node, Kotlin, SQL, Prisma and a few more.
   `.trim(),
   `I am constantly in search of creating quality software, with great
   performance and accessible to all people.
