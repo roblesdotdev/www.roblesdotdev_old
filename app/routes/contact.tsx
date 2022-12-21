@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
+import Spacer from '~/components/spacer'
 
 export const meta: MetaFunction = () => ({
   title: 'Contact - Aldo R. Robles',
@@ -18,19 +19,19 @@ export default function Contact() {
         <ul className="flex list-disc flex-col gap-4 leading-relaxed">
           <li>
             <b>You're hunting around for the lowest price.</b> I don't compete
-            on prices. And I don’t have a fixed or hourly rate. I charge on a
+            on prices. And I don't have a fixed or hourly rate. I charge on a
             per project/value base, and only provide high quality work that is
-            worth investing in. If you’re just looking for someone to get the
+            worth investing in. If you're just looking for someone to get the
             work done and are not interested in how, then you should probably be
             looking somewhere else.
           </li>
           <li>
             <b>You need someone to do quick work.</b> Quick work often means
-            less quality work; and I don’t offer that.
+            less quality work; and I don't offer that.
           </li>
           <li>
             <b>You need a designer to design your Web site/app UI.</b> While I
-            have a soft spot for design, I am not a designer and therefore don’t
+            have a soft spot for design, I am not a designer and therefore don't
             do any design work.
           </li>
           <li>
@@ -39,7 +40,7 @@ export default function Contact() {
           </li>
         </ul>
       </div>
-      <div className="h-16" />
+      <Spacer />
       <div className="font-light leading-relaxed text-fg-muted md:text-lg lg:leading-loose">
         <p>
           If you're still here and interested in my profile, I'd love to hear
