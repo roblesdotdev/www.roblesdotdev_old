@@ -81,8 +81,8 @@ export const links: LinksFunction = () => [
   },
   { rel: 'manifest', href: '/site.webmanifest' },
   { rel: 'icon', href: '/favicon.ico' },
-  { rel: 'stylesheet', as: 'style', href: tailwindStyles },
-  { rel: 'stylesheet', as: 'style', href: appStyles },
+  { rel: 'stylesheet', href: tailwindStyles },
+  { rel: 'stylesheet', href: appStyles },
 ]
 
 export const loader: LoaderFunction = async ({ request }) => {
