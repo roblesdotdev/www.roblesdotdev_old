@@ -1,5 +1,6 @@
 import { Link } from '@remix-run/react'
 import { ArrowOnSquareIcon, GithubIcon, LinkedinIcon } from '~/components/icons'
+import { contact } from '~/content/data'
 
 export default function HeroSection() {
   return (
@@ -35,7 +36,7 @@ export default function HeroSection() {
         <ul className="flex items-center gap-6 text-fg-muted">
           <li>
             <a
-              href="https://github.com/roblesdotdev"
+              href={contact.GITHUB}
               rel="noopener noreferrer"
               target="_blank"
               className="group flex items-center gap-3 hover:text-link"
@@ -54,7 +55,7 @@ export default function HeroSection() {
           </li>
           <li>
             <a
-              href="https://linkedin.com/in/robles-ra"
+              href={contact.LINKEDIN}
               rel="noopener noreferrer"
               target="_blank"
               className="group flex items-center gap-4 hover:text-link"

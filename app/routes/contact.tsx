@@ -1,5 +1,6 @@
 import type { MetaFunction } from '@remix-run/node'
 import Spacer from '~/components/spacer'
+import { contact } from '~/content/data'
 
 export const meta: MetaFunction = () => ({
   title: 'Contact - Aldo R. Robles',
@@ -46,10 +47,10 @@ export default function Contact() {
           If you're still here and interested in my profile, I'd love to hear
           from you and learn more about what you're working on. Write me at{' '}
           <a
-            href="mailto:hello@roblesdotdev.com"
+            href={`mailto:${contact.EMAIL}`}
             className="inline cursor-pointer text-link hover:text-link-dark"
           >
-            hello@roblesdotdev.com
+            {contact.EMAIL}
           </a>
           . The more details about your project you include in your message, the
           faster I'll get back to you. You will receive a response from me

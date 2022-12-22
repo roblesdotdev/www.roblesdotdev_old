@@ -25,3 +25,9 @@ export const skills = [
   performance and accessible to all people.
   `.trim(),
 ]
+
+export const contact = {
+  EMAIL: 'robles.contactme@gmail.com',
+  GITHUB: 'https://github.com/roblesdotdev',
+  LINKEDIN: 'https://linkedin.com/in/robles-ra',
+}
