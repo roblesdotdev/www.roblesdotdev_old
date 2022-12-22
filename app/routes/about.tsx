@@ -57,7 +57,7 @@ export default function AboutPage() {
             Hosted on{' '}
             <a
               className="underline hover:text-link"
-              href="https://tailwindcss.com"
+              href="https://fly.io"
               target="_blank"
               rel="noreferrer"
             >
