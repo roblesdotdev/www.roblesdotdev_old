@@ -1,4 +1,9 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node'
+import type {
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+} from '@remix-run/node'
+import { json } from '@remix-run/node'
 import {
   Links,
   LiveReload,
@@ -14,13 +19,19 @@ import Navbar from '~/components/navbar'
 import Footer from '~/components/footer'
 import { NotFound, ServerError } from './components/errors'
 import type { ReactNode } from 'react'
+import { getSocialMetas } from './utils/seo'
+import { getDomainUrl, getUrl } from './utils'
 
-export const meta: MetaFunction = () => ({
-  charset: 'utf-8',
-  title: 'Aldo R. Robles',
-  description: 'Aldo R. Robles Fullstack Developer',
-  viewport: 'width=device-width,initial-scale=1',
-})
+export const meta: MetaFunction = ({ data }) => {
+  const requestInfo = data?.requestInfo
+  return {
+    charset: 'utf-8',
+    viewport: 'width=device-width,initial-scale=1',
+    ...getSocialMetas({
+      url: getUrl(requestInfo),
+    }),
+  }
+}
 
 export const links: LinksFunction = () => [
   {
@@ -73,6 +84,15 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', as: 'style', href: tailwindStyles },
   { rel: 'stylesheet', as: 'style', href: appStyles },
 ]
+
+export const loader: LoaderFunction = async ({ request }) => {
+  return json({
+    requestInfo: {
+      origin: getDomainUrl(request),
+      path: new URL(request.url).pathname,
+    },
+  })
+}
 
 function Document({
   title,
