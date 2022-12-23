@@ -1,18 +1,18 @@
 import { Link } from '@remix-run/react'
 import { ArrowOnSquareIcon, GithubIcon, LinkedinIcon } from '~/components/icons'
 import { contact } from '~/content/data'
-import { H1 } from '../typography'
+import { H1, Paragraph } from '../typography'
 
 export default function HeroSection() {
   return (
     <>
       <H1>Experimenting alternative ways to create better applications.</H1>
-      <div className="flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
-        <p className="mt-8">
+      <div className="flex flex-col gap-6">
+        <Paragraph className="mt-8">
           Hi! My name is <b>Aldo R. Robles</b>. I'm a passionate developer
           interested in web, mobile, command line tools and tons of other stuff.
-        </p>
-        <p>
+        </Paragraph>
+        <Paragraph>
           I'm currently located in Argentina, I work remotely and do projects
           experimenting with different technologies to create better sites and
           applications.{' '}
@@ -23,7 +23,7 @@ export default function HeroSection() {
             About me
             <ArrowOnSquareIcon />
           </Link>
-        </p>
+        </Paragraph>
       </div>
       <div className="mt-10 flex items-center gap-6 md:mt-12 lg:mt-16">
         <Link

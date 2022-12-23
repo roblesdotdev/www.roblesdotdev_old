@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
-import { H2 } from '~/components/typography'
+import { H2, Paragraph } from '~/components/typography'
 import { info, skills } from '~/content/data'
 
 export const meta: MetaFunction = () => ({
@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => ({
 export default function AboutPage() {
   return (
     <div className="mx-auto h-full max-w-xl py-12 px-6 md:max-w-2xl lg:max-w-4xl">
-      <section className="flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
+      <section className="flex flex-col gap-6">
         <div className="flex items-center gap-2">
           <img
             alt="My pic profile"
@@ -18,7 +18,10 @@ export default function AboutPage() {
           />
         </div>
         {info.map((paragraph, idx) => (
-          <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
+          <Paragraph
+            key={idx}
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
         ))}
       </section>
       <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
@@ -28,11 +31,11 @@ export default function AboutPage() {
         ))}
       </section>
 
-      <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
+      <section className="mt-12 flex flex-col gap-6">
         <H2>About this site</H2>
-        <p>If you're interested, this site is built with:</p>
+        <Paragraph>If you're interested, this site is built with:</Paragraph>
         <ul className="list">
-          <li>
+          <Paragraph as="li">
             <a
               className="underline hover:text-link"
               href="https://remix.run"
@@ -42,8 +45,8 @@ export default function AboutPage() {
               Remix
             </a>{' '}
             as main framework
-          </li>
-          <li>
+          </Paragraph>
+          <Paragraph as="li">
             <a
               className="underline hover:text-link"
               href="https://tailwindcss.com"
@@ -53,8 +56,8 @@ export default function AboutPage() {
               TailwindCSS
             </a>{' '}
             for styling
-          </li>
-          <li>
+          </Paragraph>
+          <Paragraph as="li">
             Hosted on{' '}
             <a
               className="underline hover:text-link"
@@ -64,9 +67,9 @@ export default function AboutPage() {
             >
               Fly.io
             </a>
-          </li>
+          </Paragraph>
         </ul>
-        <p>
+        <Paragraph>
           You can find the full code and more projects on my{' '}
           <a
             className="text-link-dark underline hover:text-link"
@@ -77,7 +80,7 @@ export default function AboutPage() {
             github
           </a>
           .
-        </p>
+        </Paragraph>
       </section>
     </div>
   )

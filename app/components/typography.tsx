@@ -40,8 +40,8 @@ function Heading({ as = 'h1', children, ...props }: HeadingProps) {
 }
 
 type HProps = {
-  children: ReactNode
   className?: string
+  children: ReactNode
 }
 
 function H1(props: HProps) {
@@ -67,4 +67,21 @@ function H6(props: HProps) {
   return <Heading as="h6" {...props} />
 }
 
-export { H1, H2, H3, H4, H5, H6 }
+type ParagraphProps = {
+  as?: 'p' | 'li' | 'span'
+  className?: string
+} & (
+  | { children: React.ReactNode }
+  | { dangerouslySetInnerHTML: { __html: string } }
+)
+
+function Paragraph({ as = 'p', className, ...rest }: ParagraphProps) {
+  const cls = clsx(
+    'text-base font-light text-fg-muted max-w-full md:text-lg',
+    'leading-[1.80] lg:leading-loose',
+    className,
+  )
+  return createElement(as, { className: cls, ...rest })
+}
+
+export { H1, H2, H3, H4, H5, H6, Paragraph }
