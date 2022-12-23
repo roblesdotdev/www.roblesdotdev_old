@@ -1,6 +1,6 @@
 import type { MetaFunction } from '@remix-run/node'
 import { H2, Paragraph } from '~/components/typography'
-import { info, skills } from '~/content/data'
+import { info, siteStack, skills } from '~/content/data'
 
 export const meta: MetaFunction = () => ({
   title: 'About - Aldo R. Robles',
@@ -35,39 +35,19 @@ export default function AboutPage() {
         <H2>About this site</H2>
         <Paragraph>If you're interested, this site is built with:</Paragraph>
         <ul className="list">
-          <Paragraph as="li">
-            <a
-              className="underline hover:text-link"
-              href="https://remix.run"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Remix
-            </a>{' '}
-            as main framework
-          </Paragraph>
-          <Paragraph as="li">
-            <a
-              className="underline hover:text-link"
-              href="https://tailwindcss.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              TailwindCSS
-            </a>{' '}
-            for styling
-          </Paragraph>
-          <Paragraph as="li">
-            Hosted on{' '}
-            <a
-              className="underline hover:text-link"
-              href="https://fly.io"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Fly.io
-            </a>
-          </Paragraph>
+          {siteStack.map(stack => (
+            <Paragraph as="li" key={stack.url}>
+              <a
+                className="underline hover:text-link"
+                href={stack.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {stack.label}
+              </a>{' '}
+              {stack.description}
+            </Paragraph>
+          ))}
         </ul>
         <Paragraph>
           You can find the full code and more projects on my{' '}

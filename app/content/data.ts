@@ -26,8 +26,44 @@ export const skills = [
   `.trim(),
 ]
 
+export const siteStack = [
+  {
+    label: 'Remix',
+    url: 'https://remix.run',
+    description: 'as a main framework',
+  },
+  {
+    label: 'TailwindCSS',
+    url: 'https://tailwindcss.com',
+    description: 'for styling',
+  },
+  { label: 'Fly.io', url: 'https://fly.io', description: 'for hosting' },
+]
+
 export const contact = {
   EMAIL: 'robles.contactme@gmail.com',
   GITHUB: 'https://github.com/roblesdotdev',
   LINKEDIN: 'https://linkedin.com/in/robles-ra',
 }
+
+export const contactReasons = [
+  `
+<b>You're hunting around for the lowest price.</b> I don't compete on prices. 
+And I don't have a fixed or hourly rate. I charge on a per project/value base, 
+and only provide high quality work that is worth investing in. If you're just 
+looking for someone to get the work done and are not interested in how, then 
+you should probably be looking somewhere else.
+  `.trim(),
+  `
+<b>You need someone to do quick work.</b> Quick work often means less quality 
+work; and I don't offer that. 
+  `.trim(),
+  `
+<b>You need a designer to design your Web site/app UI.</b> While I have a soft 
+spot for design, I am not a designer and therefore don't do any design work.
+  `.trim(),
+  `
+<b>You are building a new team.</b> I am comfortable working in small teams 
+with well-defined goals and as few meetings as possible.
+  `.trim(),
+]

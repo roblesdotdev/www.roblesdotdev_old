@@ -1,7 +1,7 @@
 import type { MetaFunction } from '@remix-run/node'
 import Spacer from '~/components/spacer'
 import { H1, Paragraph } from '~/components/typography'
-import { contact } from '~/content/data'
+import { contact, contactReasons } from '~/content/data'
 
 export const meta: MetaFunction = () => ({
   title: 'Contact - Aldo R. Robles',
@@ -17,27 +17,13 @@ export default function Contact() {
           <b>not get in touch</b>:
         </Paragraph>
         <ul className="list flex flex-col gap-4 font-light leading-[1.80] lg:leading-loose">
-          <Paragraph as="li">
-            <b>You're hunting around for the lowest price.</b> I don't compete
-            on prices. And I don't have a fixed or hourly rate. I charge on a
-            per project/value base, and only provide high quality work that is
-            worth investing in. If you're just looking for someone to get the
-            work done and are not interested in how, then you should probably be
-            looking somewhere else.
-          </Paragraph>
-          <Paragraph as="li">
-            <b>You need someone to do quick work.</b> Quick work often means
-            less quality work; and I don't offer that.
-          </Paragraph>
-          <Paragraph as="li">
-            <b>You need a designer to design your Web site/app UI.</b> While I
-            have a soft spot for design, I am not a designer and therefore don't
-            do any design work.
-          </Paragraph>
-          <Paragraph as="li">
-            <b>You are building a new team.</b> I am comfortable working in
-            small teams with well-defined goals and as few meetings as possible.
-          </Paragraph>
+          {contactReasons.map((reason, idx) => (
+            <Paragraph
+              as="li"
+              key={idx}
+              dangerouslySetInnerHTML={{ __html: reason }}
+            />
+          ))}
         </ul>
       </div>
       <Spacer />
