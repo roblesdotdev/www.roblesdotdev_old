@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
+import { H2 } from '~/components/typography'
 import { info, skills } from '~/content/data'
 
 export const meta: MetaFunction = () => ({
@@ -21,14 +22,14 @@ export default function AboutPage() {
         ))}
       </section>
       <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
-        <h1 className="text-2xl font-bold">Skills</h1>
+        <H2>Skills</H2>
         {skills.map((paragraph, idx) => (
           <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
         ))}
       </section>
 
       <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
-        <h1 className="text-2xl font-bold">About this site</h1>
+        <H2>About this site</H2>
         <p>If you're interested, this site is built with:</p>
         <ul className="list">
           <li>

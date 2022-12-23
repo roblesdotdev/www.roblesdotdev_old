@@ -1,5 +1,6 @@
 import type { MetaFunction } from '@remix-run/node'
 import Spacer from '~/components/spacer'
+import { H1 } from '~/components/typography'
 import { contact } from '~/content/data'
 
 export const meta: MetaFunction = () => ({
@@ -9,9 +10,7 @@ export const meta: MetaFunction = () => ({
 export default function Contact() {
   return (
     <div className="mx-auto h-full max-w-xl py-12 px-6 md:max-w-2xl lg:max-w-4xl">
-      <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl lg:leading-tight">
-        Contact
-      </h1>
+      <H1>Contact</H1>
       <div className="mt-8 flex flex-col gap-8 font-light text-fg-muted md:text-lg">
         <p className="leading-[1.80] lg:leading-loose">
           In the interest of saving us both some time, here are a few reasons to{' '}

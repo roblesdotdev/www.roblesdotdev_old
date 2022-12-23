@@ -1,13 +1,12 @@
 import { Link } from '@remix-run/react'
 import { ArrowOnSquareIcon, GithubIcon, LinkedinIcon } from '~/components/icons'
 import { contact } from '~/content/data'
+import { H1 } from '../typography'
 
 export default function HeroSection() {
   return (
     <>
-      <h1 className="text-3xl font-bold leading-snug md:text-4xl lg:text-5xl">
-        Experimenting alternative ways to create better applications.
-      </h1>
+      <H1>Experimenting alternative ways to create better applications.</H1>
       <div className="flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
         <p className="mt-8">
           Hi! My name is <b>Aldo R. Robles</b>. I'm a passionate developer
