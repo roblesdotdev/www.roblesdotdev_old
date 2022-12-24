@@ -1,6 +1,6 @@
-# Aldo R. Robles Personal Website
+![example workflow](https://github.com/roblesdotdev/www.roblesdotdev/actions/workflows/deployment.yml/badge.svg)
 
-This is the source code for my <a href="https://roblesdotdev.fly.dev/" target="_blank">website</a>.
+This is the source code for my personal <a href="https://roblesdotdev.fly.dev/" target="_blank">website</a>.
 
 ### State
 
