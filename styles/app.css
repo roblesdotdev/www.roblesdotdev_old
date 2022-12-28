@@ -28,7 +28,7 @@
 }
 
 /* THEME */
-:root {
+:root.dark {
   --canvas-default: #16161f;
   --canvas-primary: #2c2c3a;
   --overlay: #1f1f27;
