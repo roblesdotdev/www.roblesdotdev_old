@@ -19,7 +19,7 @@ export const skills = [
   `My work fits under the umbrella of "Full-stack Developer". With a wide
   variety of skills focused on web and mobile development among which
   stand out: HTML, CSS, JavaScript, Typescript, React(next, remix),
-  Node, Kotlin, SQL, Prisma and a few more.
+  Node, Python, SQL, Prisma and a few more.
   `.trim(),
   `I am constantly in search of creating quality software, with great
   performance and accessible to all people.

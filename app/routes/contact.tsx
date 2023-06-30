@@ -1,11 +1,19 @@
-import type { MetaFunction } from '@remix-run/node'
+import type { V2_MetaFunction } from '@remix-run/node'
 import Spacer from '~/components/spacer'
 import { H1, Paragraph } from '~/components/typography'
 import { contact, contactReasons } from '~/content/data'
+import { getUrl } from '~/utils'
+import { getSocialMetas } from '~/utils/seo'
 
-export const meta: MetaFunction = () => ({
-  title: 'Contact - Aldo R. Robles',
-})
+export const meta: V2_MetaFunction = ({ data }) => {
+  const requestInfo = data?.requestInfo
+  return getSocialMetas({
+    title: 'Contact Aldo Robles',
+    description: 'Send Aldo R. Robles Personal email',
+    keywords: 'Contact, Aldo R. Robles',
+    url: getUrl(requestInfo),
+  })
+}
 
 export default function Contact() {
   return (

@@ -1,10 +1,18 @@
-import type { MetaFunction } from '@remix-run/node'
+import type { V2_MetaFunction } from '@remix-run/node'
 import { H2, Paragraph } from '~/components/typography'
 import { info, siteStack, skills } from '~/content/data'
+import { getUrl } from '~/utils'
+import { getSocialMetas } from '~/utils/seo'
 
-export const meta: MetaFunction = () => ({
-  title: 'About - Aldo R. Robles',
-})
+export const meta: V2_MetaFunction = ({ data }) => {
+  const requestInfo = data?.requestInfo
+  return getSocialMetas({
+    title: 'About Aldo Robles',
+    description: 'Get to know Aldo R. Robles',
+    keywords: 'About, Aldo R. Robles, Aldo Robles',
+    url: getUrl(requestInfo),
+  })
+}
 
 export default function AboutPage() {
   return (

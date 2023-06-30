@@ -17,7 +17,7 @@
     },
     "typeRoots": ["./types", "./node_modules/@types"],
     "skipLibCheck": true,
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "noEmit": true

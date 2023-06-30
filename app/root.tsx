@@ -1,7 +1,7 @@
 import type {
   LinksFunction,
   LoaderFunction,
-  MetaFunction,
+  V2_MetaFunction,
 } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import {
@@ -11,7 +11,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
+  isRouteErrorResponse,
+  useRouteError,
 } from '@remix-run/react'
 import tailwindStyles from '~/styles/tailwind.css'
 import appStyles from '~/styles/app.css'
@@ -22,15 +23,11 @@ import type { ReactNode } from 'react'
 import { getSocialMetas } from './utils/seo'
 import { getDomainUrl, getUrl } from './utils'
 
-export const meta: MetaFunction = ({ data }) => {
+export const meta: V2_MetaFunction = ({ data }) => {
   const requestInfo = data?.requestInfo
-  return {
-    charset: 'utf-8',
-    viewport: 'width=device-width,initial-scale=1',
-    ...getSocialMetas({
-      url: getUrl(requestInfo),
-    }),
-  }
+  return getSocialMetas({
+    url: getUrl(requestInfo),
+  })
 }
 
 export const links: LinksFunction = () => [
@@ -105,6 +102,8 @@ function Document({
     <html lang="en">
       <head>
         {title ? <title>{title}</title> : null}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
@@ -130,22 +129,25 @@ export default function App() {
   )
 }
 
-export function CatchBoundary() {
-  const caught = useCatch()
-  if (caught.status === 404) {
+export function ErrorBoundary() {
+  const error = useRouteError()
+
+  if (isRouteErrorResponse(error)) {
     return (
       <Document title="Oh No! Not Found">
         <NotFound />
       </Document>
     )
   }
-  throw new Error(`Unhandled error: ${caught.status}`)
-}
 
-export function ErrorBoundary({ error }: { error: Error }) {
+  let errorMessage = 'Unknown error'
+  if (error instanceof Error) {
+    errorMessage = error.message
+  }
+
   return (
     <Document title="Uh-oh!">
-      <ServerError error={error} />
+      <ServerError errorMessage={errorMessage} />
     </Document>
   )
 }

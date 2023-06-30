@@ -96,12 +96,13 @@ function NotFound() {
   )
 }
 
-function ServerError({ error }: { error?: Error }) {
+function ServerError({ errorMessage }: { errorMessage?: string }) {
   const { pathname } = useLocation()
+
+  console.log(errorMessage)
 
   return (
     <ErrorPage
-      error={error}
       errorProps={{
         title: '500 - Oh no, something did not go well.',
         subtitle: `"${pathname}" is currently not working. So sorry.`,
