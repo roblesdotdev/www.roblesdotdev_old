@@ -20,6 +20,10 @@ const LINKS = [
     to: '/contact',
     label: 'Contact',
   },
+  {
+    to: '/projects',
+    label: 'Projects',
+  },
 ]
 
 const MOBILE_LINKS = [
@@ -32,16 +36,16 @@ const MOBILE_LINKS = [
 
 export default function Navbar({ className }: { className?: string }) {
   const cls = clsx(
-    'max-w-7xl mx-auto flex items-center justify-between',
+    'max-w-4xl mx-auto flex items-center justify-between',
     className,
   )
   return (
-    <div className="p-8">
+    <div className="p-6">
       <nav className={cls}>
         <Link prefetch="intent" to="/" className="text-2xl font-bold">
           <h1>r.</h1>
         </Link>
-        <ul className="hidden lg:flex">
+        <ul className="hidden sm:flex">
           {LINKS.map(link => (
             <NavLink to={link.to} key={link.to}>
               {link.label}
@@ -49,7 +53,7 @@ export default function Navbar({ className }: { className?: string }) {
           ))}
         </ul>
 
-        <div className="block lg:hidden">
+        <div className="block sm:hidden">
           <MobileMenu />
         </div>
       </nav>
@@ -170,7 +174,7 @@ function MobileMenu() {
           <>
             <MenuButton
               aria-controls=""
-              className="inline-flex h-14 w-14 items-center justify-center rounded-lg border-2 border-canvas-primary text-fg-muted transition focus:outline-none"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border-2 border-canvas-primary text-fg-muted transition focus:outline-none"
             >
               <span className="sr-only">Toggle menu</span>
               <svg

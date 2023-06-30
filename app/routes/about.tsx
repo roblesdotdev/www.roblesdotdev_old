@@ -16,7 +16,7 @@ export const meta: V2_MetaFunction = ({ data }) => {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto h-full max-w-xl py-12 px-6 md:max-w-2xl lg:max-w-4xl">
+    <div className="mx-auto h-full max-w-4xl py-12">
       <section className="flex flex-col gap-6">
         <div className="flex items-center gap-2">
           <img

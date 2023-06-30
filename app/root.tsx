@@ -110,7 +110,7 @@ function Document({
       <body className="min-h-screen w-full overflow-x-hidden antialiased">
         <div className="layout bg-canvas font-mono text-fg">
           <Navbar className="navbar" />
-          <main className="main">{children}</main>
+          <main className="main px-6">{children}</main>
           <Footer className="footer" />
         </div>
         <ScrollRestoration />

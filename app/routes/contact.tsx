@@ -1,6 +1,6 @@
 import type { V2_MetaFunction } from '@remix-run/node'
 import Spacer from '~/components/spacer'
-import { H1, Paragraph } from '~/components/typography'
+import { H2, Paragraph } from '~/components/typography'
 import { contact, contactReasons } from '~/content/data'
 import { getUrl } from '~/utils'
 import { getSocialMetas } from '~/utils/seo'
@@ -17,8 +17,8 @@ export const meta: V2_MetaFunction = ({ data }) => {
 
 export default function Contact() {
   return (
-    <div className="mx-auto h-full max-w-xl py-12 px-6 md:max-w-2xl lg:max-w-4xl">
-      <H1>Contact</H1>
+    <div className="mx-auto h-full max-w-4xl py-12">
+      <H2>Contact</H2>
       <div className="mt-8 flex flex-col gap-8">
         <Paragraph>
           In the interest of saving us both some time, here are a few reasons to{' '}

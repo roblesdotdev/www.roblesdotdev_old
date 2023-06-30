@@ -2,27 +2,39 @@ import { Link } from '@remix-run/react'
 import { ArrowOnSquareIcon, GithubIcon, LinkedinIcon } from '~/components/icons'
 import { contact } from '~/content/data'
 import { H1, Paragraph } from '../typography'
+import { Balancer } from 'react-wrap-balancer'
 
 export default function HeroSection() {
   return (
     <>
-      <H1>Experimenting alternative ways to create better applications.</H1>
+      <div className="max-w-3xl">
+        <H1>
+          <Balancer>
+            Experimenting alternative ways to create better applications.
+          </Balancer>
+        </H1>
+      </div>
       <div className="flex flex-col gap-6">
         <Paragraph className="mt-8">
-          Hi! My name is <b>Aldo R. Robles</b>. I'm a passionate developer
-          interested in web, mobile, command line tools and tons of other stuff.
+          <Balancer>
+            Hi! My name is <b>Aldo R. Robles</b>. I'm a passionate developer
+            interested in web, mobile, command line tools and tons of other
+            stuff.
+          </Balancer>
         </Paragraph>
         <Paragraph>
-          I'm currently located in Argentina, I work remotely and do projects
-          experimenting with different technologies to create better sites and
-          applications.{' '}
-          <Link
-            to="/about"
-            className="hidden items-center gap-2 text-link-dark underline hover:text-link md:inline-flex"
-          >
-            About me
-            <ArrowOnSquareIcon />
-          </Link>
+          <Balancer>
+            I'm currently located in Argentina, I work remotely and do projects
+            experimenting with different technologies to create better sites and
+            applications.{' '}
+            <Link
+              to="/about"
+              className="hidden items-center gap-2 text-link-dark underline hover:text-link md:inline-flex"
+            >
+              About me
+              <ArrowOnSquareIcon />
+            </Link>
+          </Balancer>
         </Paragraph>
       </div>
       <div className="mt-10 flex items-center gap-6 md:mt-12 lg:mt-16">
