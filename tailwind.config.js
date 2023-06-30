@@ -11,8 +11,8 @@ module.exports = {
       colors: {
         error: 'var(--error-color)',
         primary: {
-          DEFAULT: 'var(--primary)',
-          dark: 'var(--primary-dark)',
+          DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+          variant: 'rgb(var(--primary-dark) / <alpha-value>)',
         },
         'on-primary': 'var(--on-primary)',
         link: {
@@ -20,16 +20,14 @@ module.exports = {
           dark: 'var(--link-dark)',
         },
         canvas: {
-          DEFAULT: 'var(--canvas-default)',
-          primary: 'var(--canvas-primary)',
-          overlay: 'var(--overlay)',
+          DEFAULT: 'rgb(var(--canvas-default) / <alpha-value>)',
+          muted: 'rgb(var(--canvas-muted) / <alpha-value>)',
         },
         fg: {
-          DEFAULT: 'var(--fg-default)',
-          primary: 'var(--fg-primary)',
-          muted: 'var(--fg-muted)',
+          DEFAULT: 'rgb(var(--fg-default) / <alpha-value>)',
+          emphasis: 'rgb(var(--fg-primary) / <alpha-value>)',
+          muted: 'rgb(var(--fg-muted) / <alpha-value>)',
         },
-        'border-color': 'var(--border-color)',
       },
     },
     screens: {

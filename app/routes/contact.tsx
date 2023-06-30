@@ -22,7 +22,7 @@ export default function Contact() {
       <div className="mt-8 flex flex-col gap-8">
         <Paragraph>
           In the interest of saving us both some time, here are a few reasons to{' '}
-          <b>not get in touch</b>:
+          <b>get in touch with me</b>:
         </Paragraph>
         <ul className="list flex flex-col gap-4 font-light leading-[1.80] lg:leading-loose">
           {contactReasons.map((reason, idx) => (
@@ -45,9 +45,11 @@ export default function Contact() {
           >
             {contact.EMAIL}
           </a>
-          . The more details about your project you include in your message, the
-          faster I'll get back to you. You will receive a response from me
-          within 3/5 business days.
+          If you're still here and interested in my profile, I'd love to hear
+          from you and learn more about what you're working on. Write me at
+          robles.contactme@gmail.com. The more details about your project you
+          include in your message, the faster I'll get back to you. You can
+          expect a response from me soon.
         </Paragraph>
       </div>
     </div>

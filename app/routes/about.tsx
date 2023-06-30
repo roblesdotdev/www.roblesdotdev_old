@@ -22,7 +22,7 @@ export default function AboutPage() {
           <img
             alt="My pic profile"
             src="/images/profile.jpg"
-            className="h-16 w-16 rounded-full ring-4 ring-border-color"
+            className="h-16 w-16 rounded-full ring-4 ring-primary"
           />
         </div>
         {info.map((paragraph, idx) => (
@@ -32,10 +32,14 @@ export default function AboutPage() {
           />
         ))}
       </section>
-      <section className="mt-12 flex flex-col gap-6 font-mono font-light leading-[1.80] text-fg-muted md:text-lg lg:leading-loose">
+      <section className="mt-12 flex flex-col gap-6 font-light leading-[1.80] md:text-lg lg:leading-loose">
         <H2>Skills</H2>
         {skills.map((paragraph, idx) => (
-          <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
+          <p
+            className="text-fg-muted"
+            key={idx}
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
         ))}
       </section>
 
