@@ -47,23 +47,23 @@ export const contact = {
 }
 
 export const contactReasons = [
-  `
-<b>You're hunting around for the lowest price.</b> I don't compete on prices. 
-And I don't have a fixed or hourly rate. I charge on a per project/value base, 
-and only provide high quality work that is worth investing in. If you're just 
-looking for someone to get the work done and are not interested in how, then 
-you should probably be looking somewhere else.
+  `<b>You value quality over the lowest price.</b> I don't compete on prices, but 
+I offer high-quality work that is worth investing in. If you're looking for 
+top-notch results and are willing to prioritize quality, 
+then we should definitely connect.
   `.trim(),
-  `
-<b>You need someone to do quick work.</b> Quick work often means less quality 
-work; and I don't offer that. 
+  `<b>You appreciate a thorough and thoughtful approach.</b> If you're looking 
+for someone who doesn't compromise on quality and attention to detail, I'm the 
+right person to contact.
   `.trim(),
-  `
-<b>You need a designer to design your Web site/app UI.</b> While I have a soft 
-spot for design, I am not a designer and therefore don't do any design work.
+  `<b>You require expertise beyond just quick work.</b> I can ensure a balance between 
+efficiency and excellence, providing you with results that meet your deadlines 
+without sacrificing the quality of the work.
   `.trim(),
-  `
-<b>You are building a new team.</b> I am comfortable working in small teams 
-with well-defined goals and as few meetings as possible.
+  `<b>You need a reliable team member.</b> I thrive in small teams with well-defined 
+goals and a streamlined workflow. 
+  `.trim(),
+  `<b>If you're building a team</b> and seeking someone who can contribute effectively 
+while minimizing unnecessary meetings, I can be a valuable addition. 
   `.trim(),
 ]

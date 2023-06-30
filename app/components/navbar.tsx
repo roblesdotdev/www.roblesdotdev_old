@@ -100,12 +100,12 @@ function MobileMenuList() {
               duration: shouldReduceMotion ? 0 : 0.15,
               ease: 'linear',
             }}
-            className="flex h-full flex-col overflow-y-auto bg-canvas-overlay pb-12"
+            className="flex h-full flex-col overflow-y-auto bg-canvas-muted pb-12"
           >
             <MenuItems className="flex flex-col border-none bg-transparent pb-8">
               {MOBILE_LINKS.map(link => (
                 <MenuLink
-                  className="w-full border-b border-border-color py-8 px-8 text-lg font-medium text-fg-muted"
+                  className="w-full border-b border-fg-muted/10 py-8 px-8 text-lg font-medium text-fg-muted hover:text-fg transition-all"
                   key={link.to}
                   as={Link}
                   to={link.to}
@@ -136,7 +136,7 @@ function NavLink({
         className={clsx(
           'block whitespace-nowrap text-lg font-medium underline-offset-4 hover:text-link focus:outline-none',
           {
-            'text-fg-default underline': isSelected,
+            'text-fg/80 underline': isSelected,
             'font-light text-fg-muted': !isSelected,
           },
         )}
@@ -174,7 +174,7 @@ function MobileMenu() {
           <>
             <MenuButton
               aria-controls=""
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border-2 border-canvas-primary text-fg-muted transition focus:outline-none"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border-2 border-fg-muted/20 text-fg-muted transition focus:outline-none"
             >
               <span className="sr-only">Toggle menu</span>
               <svg

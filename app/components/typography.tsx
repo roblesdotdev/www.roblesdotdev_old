@@ -29,9 +29,9 @@ type HeadingProps = {
   children: ReactNode
 }
 
-function Heading({ as = 'h1', children, ...props }: HeadingProps) {
+function Heading({ as = 'h1', className, children, ...props }: HeadingProps) {
   const font = fontSize[as as keyof typeof fontSize]
-  const cls = clsx('font-bold', font)
+  const cls = clsx('font-bold', className, font)
   return createElement(as, {
     className: cls,
     ...props,

@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <>
       <div className="max-w-3xl">
-        <H1>
+        <H1 className="bg-gradient-to-br from-fg to-fg-muted/70 bg-clip-text text-transparent">
           <Balancer>
             Experimenting alternative ways to create better applications.
           </Balancer>
@@ -26,21 +26,14 @@ export default function HeroSection() {
           <Balancer>
             I'm currently located in Argentina, I work remotely and do projects
             experimenting with different technologies to create better sites and
-            applications.{' '}
-            <Link
-              to="/about"
-              className="hidden items-center gap-2 text-link-dark underline hover:text-link md:inline-flex"
-            >
-              About me
-              <ArrowOnSquareIcon />
-            </Link>
+            applications.
           </Balancer>
         </Paragraph>
       </div>
       <div className="mt-10 flex items-center gap-6 md:mt-12 lg:mt-16">
         <Link
           to="contact"
-          className="rounded-md bg-canvas-primary px-12 py-4 font-medium hover:opacity-75"
+          className="rounded-md bg-primary text-white px-12 py-4 font-medium hover:bg-primary-variant"
         >
           Email me
         </Link>
@@ -50,7 +43,7 @@ export default function HeroSection() {
               href={contact.GITHUB}
               rel="noopener noreferrer"
               target="_blank"
-              className="group flex items-center gap-3 hover:text-link"
+              className="group flex items-center gap-3 hover:text-fg transition-all"
               aria-label="Github profile"
             >
               <span>
@@ -69,7 +62,7 @@ export default function HeroSection() {
               href={contact.LINKEDIN}
               rel="noopener noreferrer"
               target="_blank"
-              className="group flex items-center gap-4 hover:text-link"
+              className="group flex items-center gap-4 hover:text-fg transition-all"
               aria-label="Linkedin profile"
             >
               <span>
