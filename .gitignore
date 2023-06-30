@@ -7,6 +7,4 @@ node_modules
 
 tsconfig.tsbuildinfo
 
-/app/styles/**/*.css
-
 /app/routes/test*
